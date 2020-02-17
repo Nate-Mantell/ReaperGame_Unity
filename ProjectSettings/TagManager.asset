@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - 
+  - 
+  - 
+  - Swingins
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background1
+    uniqueID: 2729230797
+    locked: 0
+  - name: Platform1
+    uniqueID: 671055177
+    locked: 0
+  - name: Waterfall
+    uniqueID: 1618576515
+    locked: 0
+  - name: PlayerLayer
+    uniqueID: 3504509147
+    locked: 0
+  - name: WaterOverlay
+    uniqueID: 3033680083
+    locked: 0
+  - name: UI
+    uniqueID: 1689724207
+    locked: 0
