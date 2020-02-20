@@ -255,6 +255,7 @@ GameObject:
   - component: {fileID: 279623695}
   - component: {fileID: 279623694}
   - component: {fileID: 279623693}
+  - component: {fileID: 279623699}
   - component: {fileID: 279623696}
   - component: {fileID: 279623697}
   - component: {fileID: 279623698}
@@ -461,7 +462,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3585198, y: 0.24145228}
+  m_Offset: {x: 0.3585198, y: 0.22112375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -472,7 +473,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.083928585, y: 0.15709543}
+  m_Size: {x: 0.083928585, y: 0.19775248}
   m_EdgeRadius: 0
 --- !u!61 &279623694
 BoxCollider2D:
@@ -486,7 +487,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13535953, y: 0.24145234}
+  m_Offset: {x: 0.13535953, y: 0.2211237}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -497,7 +498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.091245174, y: 0.15709531}
+  m_Size: {x: 0.091245174, y: 0.1977526}
   m_EdgeRadius: 0
 --- !u!61 &279623695
 BoxCollider2D:
@@ -560,6 +561,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133a6c6d957ac4c7790c52c5e22395f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 279623687}
+  anchorColliders:
+  - {fileID: 279623695}
+  - {fileID: 279623694}
+  - {fileID: 279623693}
+  - {fileID: 279623699}
+  detectorCollider: {fileID: 279623696}
   UISwingIndicator: {fileID: 1986772017}
   UISwingControlIndicator: {fileID: 603364783}
   UISwingDetectorText: {fileID: 982622001}
@@ -581,10 +589,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  leftAnchorCollider: {fileID: 279623694}
-  topAnchorCollider: {fileID: 279623695}
-  rightAnchorCollider: {fileID: 279623693}
-  detectorCollider: {fileID: 279623696}
+  isSwinging: 0
+  isSwingButtonDown: 0
 --- !u!114 &279623698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,6 +608,31 @@ MonoBehaviour:
   enenmyLayers:
     serializedVersion: 2
     m_Bits: 0
+--- !u!61 &279623699
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 279623684}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2439425, y: 0.08131406}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31474352, y: 0.07080132}
+  m_EdgeRadius: 0
 --- !u!1 &388921514
 GameObject:
   m_ObjectHideFlags: 0

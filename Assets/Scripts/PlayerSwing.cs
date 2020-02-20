@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerSwing : MonoBehaviour {
 
+    public Animator animator;
+
+    public Collider2D[] anchorColliders = new Collider2D[4];
+    //public Collider2D leftAnchorCollider, topAnchorCollider, rightAnchorCollider;
+    public Collider2D detectorCollider;
 
     public Image UISwingIndicator, UISwingControlIndicator;
     public Text UISwingDetectorText;
@@ -18,12 +23,13 @@ public class PlayerSwing : MonoBehaviour {
     public ContactFilter2D contactFilter;
     private int numOverlappedColliders;
 
-    public Collider2D leftAnchorCollider, topAnchorCollider, rightAnchorCollider;
-    public Collider2D detectorCollider;
 
 
 
-    private bool isSwinging = false, isSwingButtonDown = false;
+
+    public bool isSwinging = false, isSwingButtonDown = false;
+
+
 
     private Collider2D[] overlappedColliders;
 
@@ -72,6 +78,9 @@ public class PlayerSwing : MonoBehaviour {
             isSwingButtonDown = false;
             UISwingControlIndicator.enabled = false;
 
+            isSwinging = false;
+            animator.SetTrigger("SwingEnd");
+
             ActivateDetectorColliders();
             DeactivateAnchorColliders();
 
@@ -109,6 +118,9 @@ public class PlayerSwing : MonoBehaviour {
             ActivateAnchorColliders();
 
             UISwingIndicator.enabled = true;
+
+            isSwinging = true;
+            animator.SetTrigger("SwingBegin");
         }
         else
         {
@@ -158,6 +170,7 @@ public class PlayerSwing : MonoBehaviour {
 
     }
 
+    /*
     private void DeactivateAnchorColliders() {
         leftAnchorCollider.enabled = false;
         topAnchorCollider.enabled = false;
@@ -168,6 +181,23 @@ public class PlayerSwing : MonoBehaviour {
         leftAnchorCollider.enabled = true;
         topAnchorCollider.enabled = true;
         rightAnchorCollider.enabled = true;
+    }
+    */
+
+    private void DeactivateAnchorColliders()
+    {
+        foreach (Collider2D anchorCollider in anchorColliders) {
+            anchorCollider.enabled = false;
+        }
+
+    }
+
+    private void ActivateAnchorColliders()
+    {
+        foreach (Collider2D anchorCollider in anchorColliders)
+        {
+            anchorCollider.enabled = true;
+        }
     }
 
     private void DeactivateDetectorColliders()
