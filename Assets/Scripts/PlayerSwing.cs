@@ -27,7 +27,7 @@ public class PlayerSwing : MonoBehaviour {
 
 
 
-    public bool isSwinging = false, isSwingButtonDown = false;
+    private bool isSwinging = false, isSwingButtonDown = false;
 
 
 
@@ -213,5 +213,9 @@ public class PlayerSwing : MonoBehaviour {
 
     private void SwingLeft() {
         rbody.AddForceAtPosition(SwingLeftForce,originalCenterOfMass);
+    }
+
+    public bool IsSwinging() {
+        return isSwinging;
     }
 }

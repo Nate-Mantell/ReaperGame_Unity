@@ -425,6 +425,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 137062226}
   m_CeilingCheck: {fileID: 974696411}
   m_CrouchDisableCollider: {fileID: 0}
+  m_PlayerSwingObject: {fileID: 279623697}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -589,8 +590,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  isSwinging: 0
-  isSwingButtonDown: 0
 --- !u!114 &279623698
 MonoBehaviour:
   m_ObjectHideFlags: 0
