@@ -12,7 +12,7 @@ public class PlayerSwing : MonoBehaviour {
     //public Collider2D leftAnchorCollider, topAnchorCollider, rightAnchorCollider;
     public Collider2D detectorCollider;
 
-    public Image UISwingIndicator, UISwingControlIndicator;
+
     public Text UISwingDetectorText;
 
 
@@ -38,8 +38,6 @@ public class PlayerSwing : MonoBehaviour {
     Rigidbody2D rbody;
     void Awake()
     {
-        UISwingIndicator.enabled = false;
-        UISwingControlIndicator.enabled = false;
 
         rbody = GetComponent<Rigidbody2D>();
 
@@ -70,14 +68,14 @@ public class PlayerSwing : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.B))
         {
             isSwingButtonDown = true;
-            UISwingControlIndicator.enabled = true;
+
         }
 
         if (Input.GetKeyUp(KeyCode.B)) 
         {
         
             isSwingButtonDown = false;
-            UISwingControlIndicator.enabled = false;
+
 
             if (isSwinging)
             {
@@ -123,7 +121,7 @@ public class PlayerSwing : MonoBehaviour {
 
             ActivateAnchorColliders();
 
-            UISwingIndicator.enabled = true;
+
 
             isSwinging = true;
             animator.SetTrigger("SwingBegin");
@@ -132,7 +130,7 @@ public class PlayerSwing : MonoBehaviour {
         }
         else
         {
-            UISwingIndicator.enabled = false;
+
 
             return;
 
