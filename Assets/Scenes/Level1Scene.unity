@@ -563,6 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 279623687}
+  attackAnimation: {fileID: 7400000, guid: a6dc4004b96654d8289e054efc0834d2, type: 2}
   anchorColliders:
   - {fileID: 279623695}
   - {fileID: 279623694}

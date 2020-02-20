@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerSwing : MonoBehaviour {
 
     public Animator animator;
+    public AnimationClip attackAnimation;
 
     public Collider2D[] anchorColliders = new Collider2D[4];
     //public Collider2D leftAnchorCollider, topAnchorCollider, rightAnchorCollider;
@@ -100,8 +101,6 @@ public class PlayerSwing : MonoBehaviour {
         //determine if the collision is with a swingin' knob
         //if not exit out of the script
 
-
-
         if (!isSwingButtonDown) {
             UISwingDetectorText.text = "Trigger: Bnot";
             return;
@@ -111,7 +110,8 @@ public class PlayerSwing : MonoBehaviour {
 
         UISwingDetectorText.text = "Trigger: " + numOverlappedColliders;
 
-        if (numOverlappedColliders > 0) {
+        //if collision is with a swingin' knob and the attack animation is running...
+        if (numOverlappedColliders > 0 && animator.GetCurrentAnimatorStateInfo(0).IsName(attackAnimation.name)) {
 
             DeactivateDetectorColliders();
 
