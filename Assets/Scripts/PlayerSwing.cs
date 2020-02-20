@@ -79,14 +79,20 @@ public class PlayerSwing : MonoBehaviour {
             isSwingButtonDown = false;
             UISwingControlIndicator.enabled = false;
 
-            isSwinging = false;
-            animator.SetTrigger("SwingEnd");
+            if (isSwinging)
+            {
+                animator.SetTrigger("SwingEnd");
 
-            ActivateDetectorColliders();
-            DeactivateAnchorColliders();
+                isSwinging = false;
 
-            Detach();
+                Debug.Log("SwingEnd");
 
+
+                ActivateDetectorColliders();
+                DeactivateAnchorColliders();
+
+                Detach();
+            }
         }
 
 
@@ -121,6 +127,8 @@ public class PlayerSwing : MonoBehaviour {
 
             isSwinging = true;
             animator.SetTrigger("SwingBegin");
+
+            Debug.Log("SwingBegin");
         }
         else
         {

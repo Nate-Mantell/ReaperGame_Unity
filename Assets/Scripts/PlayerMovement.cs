@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
             jump = true;
         }
 
-        Debug.Log(horizontalMove);
+        //Debug.Log(horizontalMove);
 
 
     }
